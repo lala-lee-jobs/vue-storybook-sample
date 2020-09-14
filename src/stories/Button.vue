@@ -27,6 +27,13 @@ export default {
     backgroundColor: {
       type: String,
     },
+    outline: {
+      type: Boolean,
+      default: false,
+    },
+    outlineColor: {
+      type: String,
+    },
   },
 
   computed: {
@@ -36,11 +43,13 @@ export default {
         'storybook-button--primary': this.primary,
         'storybook-button--secondary': !this.primary,
         [`storybook-button--${this.size}`]: true,
+        'storybook-button--outline': this.outline,
       };
     },
     style() {
       return {
         backgroundColor: this.backgroundColor,
+        borderColor: this.outlineColor,
       };
     },
   },

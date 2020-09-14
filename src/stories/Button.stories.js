@@ -3,14 +3,14 @@ import MyButton from './Button.vue';
 export default {
   title: 'Example/Button',
   component: MyButton,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-  },
+//   argTypes: {
+//     backgroundColor: { control: 'color' },
+//     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
+//   },
 };
 
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
+const Template = (args) => ({
+  props: Object.keys(args),
   components: { MyButton },
   template: '<my-button @onClick="onClick" v-bind="$props" />',
 });
@@ -36,4 +36,18 @@ export const Small = Template.bind({});
 Small.args = {
   size: 'small',
   label: 'Button',
+};
+
+export const BlackOutline = Template.bind({});
+BlackOutline.args = {
+  label: 'Black Outline Button',
+  outline: true,
+  outlineColor: 'black',
+};
+
+export const GreenOutline = Template.bind({});
+GreenOutline.args = {
+  label: 'Green Outline Button',
+  outline: true,
+  outlineColor: 'green',
 };
