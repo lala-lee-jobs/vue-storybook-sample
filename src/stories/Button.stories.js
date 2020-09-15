@@ -1,7 +1,7 @@
 import MyButton from './Button.vue';
 
 export default {
-  title: 'Example/Button',
+  title: 'Button',
   component: MyButton,
   parameters: {
     backgrounds: {
