@@ -20,6 +20,14 @@ Primary.args = {
   primary: true,
   label: 'Button',
 };
+Primary.parameters = {
+  backgrounds: {
+    values: [
+      { name: 'story-red', value: 'pink' },
+      { name: 'story-green', value: 'olive' },
+    ],
+  },
+};
 
 export const Secondary = Template.bind({});
 Secondary.args = {
