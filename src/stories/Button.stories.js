@@ -3,6 +3,14 @@ import MyButton from './Button.vue';
 export default {
   title: 'Example/Button',
   component: MyButton,
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'component-red', value: 'DarkRed' },
+        { name: 'component-green', value: 'DarkGreen' },
+      ],
+    },    
+  }
 //   argTypes: {
 //     backgroundColor: { control: 'color' },
 //     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
